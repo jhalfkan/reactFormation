@@ -34,7 +34,8 @@ class NewsSources extends Component {
             if(response.status === 200){
                 this.setState({
                     data: response.data.sources
-                })
+                });
+                this.props.onChange(response.data.sources[0].id);
             }
         } catch (error) {
             console.log('Something wrong with fetching: ' + error);
