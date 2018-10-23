@@ -1,8 +1,13 @@
 import React from 'react';
 
-const NewsArticle = () => {
+const NewsArticle = (props) => {
     return ( 
-        <article>News</article>
+        <article style={props.style}>
+            <a href={props.content.url} target="_blank">
+                <img src={props.content.urlToImage} alt={props.content.title} />
+                <h1>{props.content.title}</h1>
+            </a>
+        </article>
      );
 }
  
