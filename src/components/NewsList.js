@@ -14,9 +14,10 @@ class NewsList extends Component {
     render() { 
         return ( 
             <div style={this.Styles.Newslist}>
-                {this.state.data.map(
+            {(this.state.data.length > 0) ? 
+                this.state.data.map(
                     news => <NewsArticle content = {news} style={this.Styles.Article} key={uuidv1()}  />
-                )}
+                ) : <strong>Data is loading ...</strong> }
             </div>
          );
     }

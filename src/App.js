@@ -23,7 +23,7 @@ class App extends Component {
           <NewsList source={this.state.currentSource} apiKey={apiKey} />
         </main>
 
-        <footer>©Cepegra.be</footer>
+        <footer>©<span className="firstLetter">C</span>epegra.be</footer>
       </div>
     );
   }
