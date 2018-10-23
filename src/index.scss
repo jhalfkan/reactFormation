@@ -24,6 +24,7 @@ body {
       }
     }
     article {
+      position: relative;
       img {
         max-width: 100%;
       }
@@ -31,7 +32,23 @@ body {
         text-decoration: none;
         color: #000000;
         h1 {
+          font-size: 20px;
           font-weight: 300;
+          position: absolute;
+          bottom: 0;
+          background-color: rgba(255, 255, 255,0.5);
+          margin-bottom: 0px;
+          padding: 0.5em;
+          -moz-transition: padding-bottom .3s ease-in;
+          -o-transition: padding-bottom  .3s ease-in;
+          -webkit-transition: padding-bottom  .3s ease-in;
+          transition: padding-bottom  .3s ease-in;
+          width: 100%;
+        }
+        &:hover {
+          h1 {
+            padding-bottom: 1em;
+          }
         }
       }
     }
@@ -48,6 +65,15 @@ body {
       li {
         display: inline-block;
         margin-right: 1em;
+        a {
+          color: #000000;
+          text-decoration: none;
+          font-weight: 400;
+          &:hover {
+            font-weight: 700;
+            text-decoration: underline;
+          }
+        }
       }
     }
     .settingsMenu {
