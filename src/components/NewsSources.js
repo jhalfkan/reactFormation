@@ -21,7 +21,7 @@ class NewsSources extends Component {
     }
 
     handleChange = (ev) => {
-        console.log('Changement value: ' + ev.target.value);
+        this.props.onChange(ev.target.value);
     }
 
     componentDidMount() {
