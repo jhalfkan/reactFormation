@@ -1,0 +1,7 @@
+https://egghead.io/browse/frameworks/react
+https://openclassrooms.com/fr/courses/4664381-realisez-une-application-web-avec-react-js
+https://www.youtube.com/watch?v=sX3KeP7v7Kg
+
+docker: kitematic --- To test
+extension VS code: React food truck
+chrome: react developper tools
