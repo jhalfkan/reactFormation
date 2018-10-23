@@ -39,7 +39,7 @@ body {
           bottom: 0;
           background-color: rgba(255, 255, 255,0.5);
           margin-bottom: 0px;
-          padding: 0.5em;
+          padding: 1em;
           -moz-transition: padding-bottom .3s ease-in;
           -o-transition: padding-bottom  .3s ease-in;
           -webkit-transition: padding-bottom  .3s ease-in;
@@ -48,7 +48,7 @@ body {
         }
         &:hover {
           h1 {
-            padding-bottom: 1em;
+            padding-bottom: 1.5em;
           }
         }
       }
