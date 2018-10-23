@@ -29,7 +29,6 @@ class App extends Component {
   }
 
   changeSource = (newsource) => {
-      console.log('changement de source pour ' + newsource);
       this.setState({
         currentSource: newsource
     })

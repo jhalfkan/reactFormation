@@ -34,7 +34,6 @@ class NewsList extends Component {
 
     loadData = async () => {
         try {
-            console.log(this.props.source);
             const response = await axios.get(`https://newsapi.org/v2/top-headlines?sources=${this.props.source}&apiKey=${this.props.apiKey}`);
             if(response.status === 200){
                 this.setState({
