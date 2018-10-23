@@ -45,10 +45,12 @@ class NewsList extends Component {
     /* STYLE SHEET */
     Styles = {
         Newslist: {
-            display: 'Flex'
+            display: 'Flex',
+            flexWrap: 'wrap'
         },
         Article: {
-            margin: '1em'
+            margin: '1em',
+            maxWidth: '40%'
         }
     } 
 }

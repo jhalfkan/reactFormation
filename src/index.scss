@@ -11,5 +11,10 @@ body {
       header {
         border-bottom: 1px solid #000000;
       }
+      article {
+        img {
+          max-width: 100%;
+        }
+      }
   }
 }
