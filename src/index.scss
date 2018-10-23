@@ -15,6 +15,7 @@ body {
         display: inline-block;
         margin-right: 1em;
         margin-top: 0px;
+        font-size: 65px;
         .firstLetter {
           font-weight: 100;
         }
@@ -61,7 +62,7 @@ body {
       }
     }
     .menu {
-      text-align: center;
+      display: inline-block;
       li {
         display: inline-block;
         margin-right: 1em;

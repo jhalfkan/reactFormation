@@ -53,7 +53,7 @@ class NewsList extends Component {
         },
         Article: {
             margin: '1em',
-            maxWidth: '40%'
+            maxWidth: '30%'
         }
     } 
 }
