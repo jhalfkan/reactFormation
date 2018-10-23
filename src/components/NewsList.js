@@ -7,10 +7,7 @@ class NewsList extends Component {
     constructor(){
         super();
         this.state = { 
-            data: [
-                {title:'Lorem lipsum', url:'http://google.be', urlToImage: 'https://www.fillmurray.com/g/400/300' },
-                {title:'Lorem lipsum', url:'http://google.be', urlToImage: 'https://www.fillmurray.com/g/400/300' }
-            ]
+            data: []
          }
     }
     
@@ -31,7 +28,6 @@ class NewsList extends Component {
     loadData = async () => {
         try {
             const response = await axios.get(`https://newsapi.org/v2/top-headlines?sources=${this.props.source}&apiKey=${this.props.apiKey}`);
-            console.log(response);
             if(response.status === 200){
                 this.setState({
                     data: response.data.articles

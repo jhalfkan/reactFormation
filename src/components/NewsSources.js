@@ -1,18 +1,44 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class NewsSources extends Component {
-    state = {  }
+
+    constructor() {
+        super();
+        this.state = { 
+            data: []
+         }
+    }
+
     render() { 
         return ( 
             <select onChange={this.handleChange}>
-                <option value='hacker-news'>Hacker News</option>
-                <option value='le-monde'>Le monde</option>
+                {this.state.data.map(
+                    source => (<option key={source.id} value={source.id}>{source.name}</option>)
+                )}
             </select>
          );
     }
 
     handleChange = (ev) => {
-        console.log('Changement de source');
+        console.log('Changement value: ' + ev.target.value);
+    }
+
+    componentDidMount() {
+        this.loadData();
+    }
+
+    loadData = async () => {
+        try {
+            const response = await axios.get(`https://newsapi.org/v2/sources?language=${this.props.language}&apiKey=${this.props.apiKey}`);
+            if(response.status === 200){
+                this.setState({
+                    data: response.data.sources
+                })
+            }
+        } catch (error) {
+            console.log('Something wrong with fetching: ' + error);
+        }
     }
 }
  
