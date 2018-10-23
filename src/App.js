@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-            <h1>React News App</h1>
+            <h1><span className="firstLetter">R</span>eact News App</h1>
             <NewsSources language={'en'} apiKey={apiKey} onChange={this.changeSource} />
         </header>
         <main>
