@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import NewsSources from "./components/NewsSources";
 import NewsList from "./components/NewsList";
 import { HashRouter as Router, Route, Switch, Link } from "react-router-dom";
+import Menu from './components/Menu';
 
 class App extends Component {
   constructor() {
@@ -23,11 +24,7 @@ class App extends Component {
 
         <Router basename="/">
           <div>
-            <ul>
-              <li><Link to='/'>Section 1</Link></li>
-              <li><Link to='/1'>Section 2</Link></li>
-              <li><Link to='/2'>Section 3</Link></li>
-            </ul>
+            <Menu />
             <Switch>
                 <Route exact path='/' component={this.Section1} />
                 <Route exact path='/1' component={this.Section2} />
