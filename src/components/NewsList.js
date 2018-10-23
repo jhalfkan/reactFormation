@@ -30,7 +30,7 @@ class NewsList extends Component {
 
     loadData = async () => {
         try {
-            const response = await axios.get(`https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=9668f23847a440f4b4d4fcf773547862`);
+            const response = await axios.get(`https://newsapi.org/v2/top-headlines?sources=${this.props.source}&apiKey=${this.props.apiKey}`);
             console.log(response);
             if(response.status === 200){
                 this.setState({

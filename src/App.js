@@ -11,7 +11,7 @@ class App extends Component {
             <NewsSources />
         </header>
         <main>
-          <NewsList />
+          <NewsList source={'le-monde'} apiKey={'9668f23847a440f4b4d4fcf773547862'} />
         </main>
 
         <footer>©Cepegra.be</footer>
