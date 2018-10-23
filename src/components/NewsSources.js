@@ -28,6 +28,12 @@ class NewsSources extends Component {
         this.loadData();
     }
 
+    componentDidUpdate(prevProps, prevState){
+        if(prevProps.language !== this.props.language){
+            this.loadData();
+        }
+    }
+
     loadData = async () => {
         try {
             const response = await axios.get(`https://newsapi.org/v2/sources?language=${this.props.language}&apiKey=${this.props.apiKey}`);

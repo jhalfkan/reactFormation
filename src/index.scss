@@ -43,5 +43,23 @@ body {
         font-weight: 100;
       }
     }
+    .menu {
+      text-align: center;
+      li {
+        display: inline-block;
+        margin-right: 1em;
+      }
+    }
+    .settingsMenu {
+      padding: 1em;
+      text-align: center;
+      .settingsItem {
+        label {
+          margin-right: 1em;
+          font-weight: 500
+        }
+        padding: 0.5em;
+      }
+    }
   }
 }

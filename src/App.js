@@ -1,57 +1,50 @@
 import React, { Component } from "react";
 import NewsSources from "./components/NewsSources";
 import NewsList from "./components/NewsList";
-import { HashRouter as Router, Route, Switch, Link } from "react-router-dom";
-import Menu from './components/Menu';
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import Menu from "./components/Menu";
+import Settings from "./components/Settings";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      currentSource: ""
+      currentSource: "",
+      currentLanguage: "en"
     };
   }
-
-  Section1 = () =><section>Section 1</section>
-  Section2 = () =><section>Section 2</section>
-  Section3 = () =><section>Section 3</section>
 
   render() {
     const apiKey = "9668f23847a440f4b4d4fcf773547862";
 
     return (
       <div className="App">
-
         <Router basename="/">
           <div>
-            <Menu />
+            <header>
+              <h1>
+                <span className="firstLetter">R</span>eact News App
+              </h1>
+              <NewsSources
+                language={this.state.currentLanguage}
+                apiKey={apiKey}
+                onChange={this.changeSource}
+              />
+              <Menu />
+            </header>
+            <main>
             <Switch>
-                <Route exact path='/' component={this.Section1} />
-                <Route exact path='/1' component={this.Section2} />
-                <Route exact path='/2' component={this.Section3} />
+              <Route exact path="/" render = { () => <NewsList source={this.state.currentSource} apiKey={apiKey} /> }/>
+              <Route exact path="/settings" render = { () => <Settings apiKey={apiKey} language={this.state.currentLanguage} onChange={this.changeSettings} /> } />
             </Switch>
+              
+            </main>
+
+            <footer>
+              ©<span className="firstLetter">C</span>epegra.be
+            </footer>
           </div>
         </Router>
-
-        <header>
-          <h1>
-            <span className="firstLetter">R</span>
-            eact News App
-          </h1>
-          <NewsSources
-            language={"en"}
-            apiKey={apiKey}
-            onChange={this.changeSource}
-          />
-        </header>
-        <main>
-          <NewsList source={this.state.currentSource} apiKey={apiKey} />
-        </main>
-
-        <footer>
-          ©<span className="firstLetter">C</span>
-          epegra.be
-        </footer>
       </div>
     );
   }
@@ -59,6 +52,12 @@ class App extends Component {
   changeSource = newsource => {
     this.setState({
       currentSource: newsource
+    });
+  };
+
+  changeSettings = language => {
+    this.setState({
+      currentLanguage: language
     });
   };
 }
