@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NewsArticle from './NewsArticle';
+import uuidv1 from 'uuid';
 
 class NewsList extends Component {
     constructor(){
@@ -16,7 +17,7 @@ class NewsList extends Component {
         return ( 
             <div style={this.Styles.Newslist}>
                 {this.state.data.map(
-                    news => <NewsArticle content = {news} style={this.Styles.Article} />
+                    news => <NewsArticle content = {news} style={this.Styles.Article} key={uuidv1()}  />
                 )}
             </div>
          );
