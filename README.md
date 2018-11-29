@@ -1,3 +1,19 @@
+## Recuperation projet
+- `yarn install`
+- `yarn start`
+
+Super simple !
+
+## Ressource
+- [Egghead](https://egghead.io/browse/frameworks/react)
+- [OpenClassRooms](https://openclassrooms.com/fr/courses/4664381-realisez-une-application-web-avec-react-js)
+- [Youtube](https://www.youtube.com/watch?v=sX3KeP7v7Kg)
+
+### Extension
+- Chrome: react developper tools
+- VSCode: React food truck
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
