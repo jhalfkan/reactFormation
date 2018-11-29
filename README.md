@@ -10,8 +10,8 @@ Super simple !
 - [Youtube](https://www.youtube.com/watch?v=sX3KeP7v7Kg)
 
 ### Extension
-- Chrome: react developper tools
-- VSCode: React food truck
+- **Chrome**: react developper tools
+- **VSCode**: React food truck
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
