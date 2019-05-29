@@ -41,7 +41,7 @@ class App extends Component {
             </main>
 
             <footer>
-              ©<span className="firstLetter">C</span>epegra.be
+              ©<span className="firstLetter">J</span>okzin production
             </footer>
           </div>
         </Router>

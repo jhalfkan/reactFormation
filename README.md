@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9868b1cf-c80d-48ac-b46a-578fd4475038/deploy-status)](https://app.netlify.com/sites/reactnewsapp/deploys)
+
 ## Recuperation projet
 - `yarn install`
 - `yarn start`
